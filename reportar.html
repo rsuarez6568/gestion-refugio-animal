@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registro de animales que ingresan al Refugio Huellas Seguras.">
+    <title>Registrar ingreso | Refugio Huellas Seguras</title>
+</head>
+<body>
+    <header>
+        <img
+            src="assets/img/logo-huellas.png"
+            alt="Logo del Refugio Huellas Seguras"
+            width="110"
+        >
+
+        <h1>Refugio Huellas Seguras</h1>
+        <p>Gestión y seguimiento de animales bajo cuidado.</p>
+
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li>
+                    <a href="reportar.html" aria-current="page">
+                        Registrar ingreso
+                    </a>
+                </li>
+                <li><a href="rescates.html">Animales alojados</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registro de ingreso</h2>
+            <p>
+                Complete la información disponible para ingresar al animal
+                y asignar la atención correspondiente.
+            </p>
+
+            <form action="#" method="post">
+                <p>
+                    <label for="nombre-caso">
+                        Nombre provisional o título del caso:
+                    </label>
+                    <input
+                        type="text"
+                        id="nombre-caso"
+                        name="nombre-caso"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="categoria">Categoría del animal:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="">Seleccione una categoría</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                        <option value="fauna-silvestre">Fauna silvestre</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="fecha-hallazgo">Fecha del hallazgo:</label>
+                    <input
+                        type="date"
+                        id="fecha-hallazgo"
+                        name="fecha-hallazgo"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="sector">Sector donde fue encontrado:</label>
+                    <input
+                        type="text"
+                        id="sector"
+                        name="sector"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="condicion-ingreso">Condición de ingreso:</label>
+                    <select
+                        id="condicion-ingreso"
+                        name="condicion-ingreso"
+                        required
+                    >
+                        <option value="">Seleccione una opción</option>
+                        <option value="rescate-directo">Rescate directo</option>
+                        <option value="entrega-ciudadana">Entrega ciudadana</option>
+                        <option value="traslado-institucional">
+                            Traslado institucional
+                        </option>
+                    </select>
+                </p>
+
+                <fieldset>
+                    <legend>Prioridad de atención médica</legend>
+
+                    <input
+                        type="radio"
+                        id="prioridad-alta"
+                        name="prioridad"
+                        value="alta"
+                        required
+                    >
+                    <label for="prioridad-alta">Alta</label>
+
+                    <input
+                        type="radio"
+                        id="prioridad-media"
+                        name="prioridad"
+                        value="media"
+                    >
+                    <label for="prioridad-media">Media</label>
+
+                    <input
+                        type="radio"
+                        id="prioridad-baja"
+                        name="prioridad"
+                        value="baja"
+                    >
+                    <label for="prioridad-baja">Baja</label>
+                </fieldset>
+
+                <p>
+                    <label for="observaciones">
+                        Descripción del estado en que fue encontrado:
+                    </label>
+                    <br>
+                    <textarea
+                        id="observaciones"
+                        name="observaciones"
+                        rows="7"
+                        cols="48"
+                        required
+                    ></textarea>
+                </p>
+
+                <p>
+                    <button type="submit">Guardar ingreso</button>
+                    <button type="reset">Restablecer datos</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Refugio Huellas Seguras.
+        </p>
+    </footer>
+</body>
+</html>
